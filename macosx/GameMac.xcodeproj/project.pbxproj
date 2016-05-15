@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -61,24 +61,9 @@
 		D22A7E8509F433A300FC9B21 /* g_weapon.c in Sources */ = {isa = PBXBuildFile; fileRef = D22A7E7209F433A300FC9B21 /* g_weapon.c */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		014CEA420018CDE011CA2923 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		014CEA430018CDE011CA2923 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-			};
-			name = Release;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
 		8D5B49B6048680CD000E48DA /* GameMac.q2plug */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameMac.q2plug; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D22A7E0009F4330200FC9B21 /* q_shared.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = q_shared.c; path = ../q_shared.c; sourceTree = SOURCE_ROOT; };
 		D22A7E0109F4330200FC9B21 /* q_shared.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = q_shared.h; path = ../q_shared.h; sourceTree = SOURCE_ROOT; };
 		D22A7E0309F4331500FC9B21 /* p_client.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = p_client.c; path = ../p_client.c; sourceTree = SOURCE_ROOT; };
@@ -356,8 +341,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-			};
 			dependencies = (
 			);
 			name = GameMac;
@@ -371,16 +354,19 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "GameMac" */;
-			buildSettings = {
+			attributes = {
+				LastUpgradeCheck = 0730;
 			};
-			buildStyles = (
-				014CEA420018CDE011CA2923 /* Debug */,
-				014CEA430018CDE011CA2923 /* Release */,
-			);
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "GameMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* GameMacOSX */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* GameMac */,
 			);
@@ -463,11 +449,10 @@
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = C_ONLY;
@@ -475,56 +460,47 @@
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = GameMac;
 				WRAPPER_EXTENSION = q2plug;
-				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
 		1DEB913C08733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = C_ONLY;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = GameMac;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				WRAPPER_EXTENSION = q2plug;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		1DEB913F08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 3.3;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.1;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		1DEB914008733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 3.3;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.1;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
