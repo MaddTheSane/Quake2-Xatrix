@@ -1893,7 +1893,7 @@ void soldierh_attack2_refire2 (edict_t *self)
 	if (self->enemy->health <= 0)
 		return;
 
-	if ( ((skill->value == 3) && (random() < 0.5)) || (range(self, self->enemy) == RANGE_MELEE) && self->s.skinnum < 4)
+	if ( ((skill->value == 3) && (random() < 0.5)) || ((range(self, self->enemy) == RANGE_MELEE) && self->s.skinnum < 4))
 		self->monsterinfo.nextframe = FRAME_attak204;
 }
 

@@ -349,11 +349,16 @@ mmove_t gekk_move_swim_start = {FRAME_swim_01, FRAME_swim_32, gekk_frames_swim_s
 void gekk_swim (edict_t *self)
 {
 	
-	if (gekk_checkattack)
-		if (!self->enemy->waterlevel && random() > 0.7)
+    if (gekk_checkattack) {
+        if (!self->enemy->waterlevel && random() > 0.7)
+        {
 			water_to_land (self);
+        }
+    }
 	else
+    {
 		self->monsterinfo.currentmove = &gekk_move_swim_start;
+    }
 }
 
 
