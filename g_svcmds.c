@@ -118,7 +118,7 @@ qboolean SV_FilterPacket (char *from)
 		}
 		if (!*p || *p == ':')
 			break;
-		i++, p++;
+        i++; p++;
 	}
 	
 	in = *(unsigned *)m;
