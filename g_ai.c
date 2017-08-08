@@ -36,7 +36,7 @@ void AI_SetSightClient (void)
 	if (level.sight_client == NULL)
 		start = 1;
 	else
-		start = level.sight_client - g_edicts;
+		start = (int)(level.sight_client - g_edicts);
 
 	check = start;
 	while (1)
