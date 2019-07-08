@@ -359,7 +359,7 @@
 			attributes = {
 				LastUpgradeCheck = 1020;
 			};
-			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "GameMac" */;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "XatrixQuake2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
@@ -571,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "GameMac" */ = {
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "XatrixQuake2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB913F08733D840010E9CD /* Debug */,
