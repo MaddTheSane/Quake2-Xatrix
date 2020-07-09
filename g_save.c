@@ -183,6 +183,9 @@ void InitGame (void)
 	// dm map list
 	sv_maplist = gi.cvar ("sv_maplist", "", 0);
 
+	/* others */
+	aimfix = gi.cvar ("aimfix", "0", CVAR_ARCHIVE);
+
 	// items
 	InitItems ();
 
@@ -295,10 +298,8 @@ void WriteField2 (FILE *f, field_t *field, byte *base)
 			fwrite (*(char **)p, len, 1, f);
 		}
 		break;
-#if defined (__APPLE__) || defined (MACOSX)
-        default:
-                break;
-#endif /* __APPLE__ ||ÊMACOSX */
+	default:
+		break;
 	}
 }
 
@@ -694,15 +695,6 @@ void ReadLevel (char *filename)
 
 	// check function pointer base address
 	fread (&base, sizeof(base), 1, f);
-#ifdef _WIN32
-	if (base != (void *)InitGame)
-	{
-		fclose (f);
-		gi.error ("ReadLevel: function pointers have moved");
-	}
-#else
-	gi.dprintf("Function offsets %d\n", ((byte *)base) - ((byte *)InitGame));
-#endif
 
 	// load the level locals
 	ReadLevelLocals (f);

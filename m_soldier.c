@@ -1697,9 +1697,6 @@ void soldierh_fire (edict_t *self, int flash_number)
 	vec3_t	end;
 	float	r, u;
 	int		flash_index;
-#if !defined(__APPLE__) && !defined(MACOSX)
-	qboolean tone = true;
-#endif // !__APPLE__ && !MACOSX
 
 	if (self->s.skinnum < 2)
 		flash_index = blaster_flash[flash_number]; // ripper

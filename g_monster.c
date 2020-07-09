@@ -80,10 +80,6 @@ void dabeam_hit (edict_t *self)
 	vec3_t	end;
 	trace_t	tr;
 	int		count;
-#if !defined (__APPLE__) && !defined (MACOSX)
-	static	vec3_t	lmins = {-4, -4, -4};
-	static	vec3_t	lmaxs = {4, 4, 4};
-#endif /* !__APPLE__ && !MACOSX */
 
 	if (self->spawnflags & 0x80000000)
 		count = 8;

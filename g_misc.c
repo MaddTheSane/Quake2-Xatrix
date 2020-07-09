@@ -1573,9 +1573,7 @@ void misc_viper_missile_use (edict_t *self, edict_t *other, edict_t *activator)
 	self->enemy = G_Find (NULL, FOFS(targetname), self->target);
 	
 	VectorCopy (self->enemy->s.origin, vec);
-#if !defined (__APPLE__) && !defined (MACOSX)
-	vec[2] + 16;
-#endif /* !__APPLE__ && !MACOSX */
+	
 	VectorCopy (self->s.origin, start);
 	VectorSubtract (vec, start, dir);
 	VectorNormalize (dir);

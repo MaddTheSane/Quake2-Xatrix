@@ -432,10 +432,6 @@ void ChickRocket (edict_t *self)
 	vec3_t	start;
 	vec3_t	dir;
 	vec3_t	vec;
-	
-#if !defined(__APPLE__) && !defined(MACOSX)
-	qboolean tone = true;
-#endif // !__APPLE__ && !MACOSX
 
 	AngleVectors (self->s.angles, forward, right, NULL);
 	G_ProjectSource (self->s.origin, monster_flash_offset[MZ2_CHICK_ROCKET_1], forward, right, start);
